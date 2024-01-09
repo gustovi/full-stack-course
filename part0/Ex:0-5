@@ -1,0 +1,14 @@
+participant user
+participant browser
+participant server
+
+Note right of user: User navigates to SPA
+
+user->>browser: Navigate to https://studies.cs.helsinki.fi/exampleapp/spa
+
+browser-->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+activate server
+server-->>browser: SPA HTML, CSS, JS, Notes Data JSON
+deactivate server
+
+Note right of browser: SPA loads in the browser
