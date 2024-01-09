@@ -24,9 +24,7 @@ const App = () => {
         <div>
             <Header name={course.name}/>
             <Content parts={course.parts}/>
-            <Total totalexercises={course.parts.reduce((accum, currentValue) => {
-                return accum + currentValue.exercises
-            }, 0)
+            <Total totalExercises={course.parts.reduce((accum, currentValue) => accum + currentValue.exercises, 0)
             }/>
         </div>
     )

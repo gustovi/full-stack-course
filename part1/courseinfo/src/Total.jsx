@@ -1,7 +1,7 @@
-export default function Total(props) {
+export default function Total({totalExercises}) {
     return (
         <>
-            Total Exercises: {props.totalexercises}
+            Total Exercises: {totalExercises}
         </>
     )
 }

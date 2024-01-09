@@ -1,10 +1,10 @@
 import {Part} from "./Part.jsx";
 
 
-export default function Content ({parts}){
-    return(
-        parts.map(content =>
-            <Part key={content.name} name={content.name} exercises={content.exercises}/>
+export default function Content({parts}) {
+    return (
+        parts.map((content, index) =>
+            <Part key={index} name={content.name} exercises={content.exercises}/>
         )
 
     )
