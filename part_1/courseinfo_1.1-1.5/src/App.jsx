@@ -1,7 +1,23 @@
-import Header from './Header.jsx';
-import Content from './Content.jsx';
-import Total from "./Total.jsx";
+const Part = ({name, exercises}) => <p>{name} {exercises}</p>
 
+
+const Total = ({totalExercises}) => <p>Total Exercises: {totalExercises}</p>
+
+
+const Content = ({parts}) => {
+    return (
+        parts.map((content, index) =>
+            <Part key={index} name={content.name} exercises={content.exercises}/>
+        )
+
+    )
+}
+
+const Header = (props) => {
+    return (
+            <h1>{props.name}</h1>
+    )
+}
 const App = () => {
     const course = {
         name: 'Half Stack application development',
