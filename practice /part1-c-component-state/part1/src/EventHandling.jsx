@@ -12,6 +12,7 @@ const EventHandling = () => {
     const setToZero = () => setCounter(0)
     console.log('resetting to zero, value before', counter)
 
+
     return (
         <div>
             <Display counter={counter}/>
